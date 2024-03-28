@@ -1,27 +1,35 @@
-body {background-color:rgb(244, 81, 81);}
+body {background-color:rgb(244, 81, 81);
+    padding-left: 160px; /* Adjust based on the width of your sidebar */
+}
 /* -----------Add a black background color to the top navigation */
 .topnav {
-background-color: #fcfcfc;
-overflow: hidden;
+    background-color: #fcfcfc;
+    overflow: hidden;
+    height: 100%; /* Full height */
+    width: 160px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed position */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0; /* Align to the left */
 }
-/* Style the links inside the navigation bar */
+
 .topnav a {
-float: left;
-color: #000000;
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
-font-size: 17px;
+    display: block; /* Arrange links into blocks */
+    color: #000000;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    text-align: left; /* Align text to the left */
 }
-/* Change the color of links on hover */
+
 .topnav a:hover {
-background-color: #f78686;
-color: black;
+    background-color: #f78686;
+    color: black;
 }
-/* Add a color to the active/current link */
+
 .topnav a.active {
-background-color:rgb(255, 155, 155);
-color: rgb(0, 0, 0);
+    background-color: rgb(255, 155, 155);
+    color: rgb(0, 0, 0);
 }
 #title{
     text-align: center;
@@ -82,4 +90,26 @@ color: rgb(0, 0, 0);
 #bottomtag{
     color:#ede6e6;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.content-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-image-pair {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.text-image-pair p {
+    flex: 3; /* Gives more space to the text */
+    padding: 10px;
+}
+
+.text-image-pair .side-image {
+    flex: 1; /* Less space for the image */
+    max-width: 100%;
+    height: auto;
 }
